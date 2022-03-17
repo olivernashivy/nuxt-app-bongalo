@@ -6,7 +6,7 @@ function getBrowserBaseURL() {
   } else if (process.env.HEROKU_APP_NAME) {
       return `https://${process.env.HEROKU_APP_NAME}.herokuapp.com`
   } else {
-      return 'http://localhost:8000'
+      return 'https://bong-restframework-app.herokuapp.com'
 
       // throw "Trying to launch in production without SITE_DOMAIN or HEROKU_APP_NAME defined!"
   }
@@ -58,7 +58,7 @@ export default {
         '@nuxtjs/auth',
   ],
   axios: {
-    baseURL: 'http://django:80',
+    baseURL: 'https://bong-restframework-app.herokuapp.com',
     browserBaseURL: getBrowserBaseURL()
 },
 auth: {
